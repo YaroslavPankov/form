@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Travel form</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <h1>Travel reservation form</h1>
+      <h4>* denotes mandotory</h4>
+      <label class="form" for="full-name">Full name*:</label>
+      <input
+        type="text"
+        placeholder="FirstName LastName"
+        name="Full name"
+        id="full-name"
+        autofocus
+        required />
+      <label class="form" for="email_add">Email address*:</label>
+      <input
+        type="email"
+        placeholder="EMAIL_ADDRESS"
+        name="Email"
+        id="email_add"
+        pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+        required />
+      <label class="form">Select Tour Package* :</label>
+      <select class="direction" name="direction" required>
+        <option value="Goa">Goa</option>
+        <option value="Zanzibar">Zanzibar</option>
+        <option value="Thailand">Thailand</option>
+      </select>
+      <label class="form" for="">Arrival date*:</label>
+      <input type="text" placeholder="m/d/y" required />
+      <label class="form" for="tel-number">Number of persons*:</label>
+      <input
+        type="tel"
+        placeholder="UNKNOWN_TYPE"
+        id="tel-number"
+        pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+        required />
+      <label class="form">What world you want to avail?*</label>
+      <label class="col"
+        ><input type="checkbox" name="choose" required />Boarding</label
+      >
+      <label class="col"><input type="checkbox" name="choose" />Fooding</label>
+      <label class="col"
+        ><input type="checkbox" name="choose" />Sight seeing</label
+      >
+      <label class="form">Discout Coupon code:</label>
+      <input type="text" placeholder="UNKNOWN_TYPE" />
+      <label class="form">Terms and conditions*</label>
+      <input type="radio" value="I agree" name="agree" checked />I agree
+      <input type="radio" value="I disagree" name="agree" />I disagree
+      <button class="btn" type="submit">Complete reservation</button>
+    </form>
+  </body>
+</html>
